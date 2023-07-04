@@ -546,11 +546,15 @@ hr {
     
 }
 
-i {
-    padding-right: 10px ;
+.image-con1 i{
+    padding-right: 10px;
     color: #000;
 }
 
+.con1 .image-con1 i:hover {
+    color: #6fb98f;
+    font-size: 18px;
+}
 .con2 {
     display: flex;
     width: 80%;
@@ -563,6 +567,9 @@ i {
 }
 .tenlienhe {
     display: flex;
+}
+.tenlienhe i {
+    padding-right: 5px;
 }
 .content-lienhe {
     display: flex;
@@ -579,6 +586,10 @@ i {
    
 }
 
+.cactrangchinh {
+    display: flex;
+    flex-direction: column;
+}
 .cactrang a{
     color: black;
     padding: 5px 0px;
@@ -589,6 +600,10 @@ i {
 .lienhevoi {
     flex: 1;
     padding: 10px;
+    cursor: pointer;
+}
+.lienhevoi i{
+    margin-right: 5px;
 }
 
 .sonha {
