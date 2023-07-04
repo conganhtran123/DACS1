@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/giohang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="../trangchu.html" class="logo">Sportswear</a>
+        <nav>
+            <ul class="list">
+                <li class="list--item1"> <a href="../trangchu.html">Trang chủ</a></li>
+                <li class="list--item1"> <a href="./bongda.html">Sản phẩm</a> </li>
+                <li class="list--item1"> <a href="./giohang.html" class="liactive">Giỏ hàng</a> </li>
+                <!-- <li class="list--item1"> <a href="./thongke.html">Thống kê</a> </li> -->
+                <li class="list--item1"> <a href="./dangnhap.html">Đăng nhập</a> </li>
+                <!-- <li class="list--item1"> <a href="./dangky.html">Đăng ký</a> </li> -->
+            </ul>    
+        </nav>
+        <div id="toggle"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <div class="container">
+        <div class="showcard">
+            <h2>Giỏ hàng</h2>
+                <table border="1">
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                    <tbody id="mycart">
+
+                    </tbody>
+                </table>
+            <button type="button" id="muahang">Mua hàng</button>
+        </div>
+        <div id="overlay">
+            <div id="form-popup">
+                <h2>Thông tin thanh toán</h2>
+    
+                <div class="shipping-info">
+                    <form>
+                        
+                        <label for="full-name">Họ tên:</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    
+                        <label for="address">Địa chỉ:</label>
+                        <input type="text" id="address" name="address" required>
+                    
+                        <label for="phone">Điện thoại:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="hinhthuc">Phương thức thanh toán:</label> 
+                        <select name="hinhthuc" id="hinhthuc">
+                            <!-- <option value=""></option> -->
+                            <option value="SportswearPay">SportswearPay</option>
+                            <option value="Thẻ tín dụng/ghi nợ">Thẻ tín dụng/ghi nợ</option>
+                            <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
+                        </select>
+                        
+                        <button type="button" id="thanhtoan" onclick="dongydathang()">Thanh toán</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <div id="hienloi">
+            <div id="khungloi">
+                Bạn vẫn chưa chọn sản phẩm nào để mua.
+                <button onclick="quaylaisanpham()">OK</button>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <script src="../assets/js/jsbongda.js"></script>
+    <script src="../assets/js/jsdangnhap.js"></script>
+    <script>
+        showgiohang_trangthanhtoan();
+        
+        if (kt()){
+            $(document).ready(function(){
+                $("#muahang").click(function(){
+                    $("#overlay").css("display","block");
+                });
+                // $("#thanhtoan").click(function(){
+                //     $("#overlay").css("display","none");
+
+                // });
+            });
+            
+        }else {
+            $(document).ready(function(){
+                $("#muahang").click(function(){
+                    $("#hienloi").css("display","block");
+                });
+                // $("#thanhtoan").click(function(){
+                //     $("#overlay").css("display","none");
+
+                // });
+            });
+        };
+        
+        
+
+        $('#toggle').click(function(){
+                $('nav').toggle();
+            });
+
+        
+    </script>
+    
+</body>
+</html>

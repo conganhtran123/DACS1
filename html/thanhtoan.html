@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/giohang.css">
+</head>
+<body>
+    <header>
+        <a href="../trangchu.html" class="logo">Sportswear</a>
+        <nav>
+            <ul class="list">
+                <li class="list--item1"> <a href="../trangchu.html">Trang chủ</a></li>
+                <li class="list--item1"> <a href="./bongda.html">Sản phẩm</a> </li>
+
+                <!-- <li class="list--item1"> <a href="./giohang.html">Giỏ hàng</a> </li> -->
+                <li class="list--item1"> <a href="./thanhtoan.html" class="liactive">Thanh toán</a> </li>
+                <li class="list--item1"> <a href="./dangnhap.html">Đăng nhập</a> </li>
+            </ul>    
+        </nav>
+        <div id="toggle"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    
+
+    <div class="container">
+        <div class="shipping-info">
+            <div>
+                <h2>MỜI BẠN XÁC NHẬN LẠI THÔNG TIN MỘT LẦN NỮA</h2>
+            </div>
+            <form id="thongtinnhanhang">
+
+            </form>
+        </div>
+        <div class="showcard">
+            <h2>Sản phẩm</h2>
+                <table border="1">
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                    <tbody id="mycart"></tbody>
+                </table>
+        </div>
+    
+        <button class="xacnhan" onclick="thongbao()">Xác nhận</button>
+    </div>
+
+    
+    <script src="../assets/js/jsbongda.js"></script>
+    <script>
+
+        // $(document).ready(function(){
+        //     $("#muahang").click(function(){
+        //         $("#overlay").css("display","block");
+        //     });
+        //     $("#thanhtoan").click(function(){
+        //         $("#overlay").css("display","none");
+
+        //     });
+        // });
+        showthongtinnguoinhan();
+        showgiohang_trangthanhtoan();
+        
+        
+        
+
+        
+    </script>
+</body>
+</html>

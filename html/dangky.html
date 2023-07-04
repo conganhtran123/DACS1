@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <header>
+            
+        <a href="../trangchu.html" class="logo">Sportswear</a>
+        <nav>
+            <ul class="list">
+                <li> <a href="../trangchu.html">Trang chủ</a></li>
+                <li> <a href="./bongda.html">Sản phẩm</a> </li>
+                <li> <a href="./giohang.html">Giỏ hàng</a> </li>
+                <li> <a href="./dangky.html" class="liactive">Đăng ký</a> </li>
+                <!-- <li> <a href="./html/dangky.html">Đăng ký</a> </li> -->
+
+                
+                
+            </ul>
+        </nav>
+        <div id="toggle"><i class="fa-solid fa-bars"></i></div>
+
+    </header>
+
+    <!-- Register layout -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+
+        <div class="modal__body">
+            <!-- Authen form -->
+            <form onsubmit="dangky()">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">ĐĂNG KÝ</h3>
+                            <div class="dangnhap1"><a class="auth-form__switch-btn" href="./dangnhap.html" >Đăng nhập</a></div>
+                        </div>
+    
+                        <div class="auth-form_form">
+                            <div class="auth-form__group">
+                                <input type="text" id="username" class="auth-form__input" placeholder="Tên đăng nhập">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" id="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                                <i class="fa-solid fa-eye-slash eye1" id="eyeClose1"></i>
+                                <i class="fa-solid fa-eye eye1 eye11" id="eyeOpen1"></i>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" id="password1" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                                <i class="fa-solid fa-eye-slash eye2" id="eyeClose2"></i>
+                                <i class="fa-solid fa-eye eye2 eye22" id="eyeOpen2"></i>
+                            </div>
+                        </div>
+    
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                <input type="checkbox" class="auth-form__checkbox" name="auth-form__checkbox" placeholder="..">
+                                Bằng việc đăng ký, bạn đã đồng ý với chúng tôi về
+                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+    
+                        <div class="auth-form__control">
+                            <button type="submit" class="btn btn--primary">ĐĂNG KÝ</button>
+                        </div>
+                        </div>
+                    </div>
+    
+                    <div class="auth-form__socials dangki1">
+                        <a href="" class="btn btn--size-s btn--with-icon auth-form__socials--facebook">
+                            <i class="auth-form__socials--icon fa-brands fa-facebook"></i>
+                            <span class="auth-form__socials--title">
+                                Kết nối với Facebook
+                            </span>
+                        </a>
+                        <a href="" class="btn btn--size-s btn--with-icon auth-form__socials--google">
+                            <i class="auth-form__socials--icon fa-brands fa-google"></i>
+                            <span class="auth-form__socials--title">
+                                Kết nối với Google
+                            </span>
+                        </a> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#toggle').click(function(){
+                $('nav').toggle();
+            });
+        });
+    </script>
+    <script src="../assets/js/jsdangnhap.js"></script>
+    <script src="../assets/js/matkhau.js"></script>
+</body>
+</html>

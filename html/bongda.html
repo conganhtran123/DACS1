@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bóng đá</title>
+    <link rel="stylesheet" href="../assets/css/bongda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../trangchu.html" class="logo">Sportswear</a>
+        <nav class="nav-tieude">
+            <ul class="list">
+                <li class="list--item1"> <a href="../trangchu.html">Trang chủ</a></li>
+                <li class="list--item1"> <a href="./bongda.html" class="liactive">Sản phẩm</a> </li>
+                <li class="list--item1"> <a href="./giohang.html">Giỏ hàng</a> </li>
+                <!-- <li class="list--item1"> <a href="./thongke.html">Thống kê</a> </li> -->
+                <li class="list--item1"> <a href="./dangnhap.html">Đăng nhập</a> </li>
+                <!-- <li class="list--item1"> <a href="./dangky.html">Đăng ký</a> </li> -->
+            </ul>    
+        </nav>
+        <div id="toggle"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <div class="logogiohang">
+        <a onclick="showcart()"><img src="../assets/img/giohang.png"><span id="countsp">0</span></a>
+    </div>
+    
+    
+    <div id="showcart">
+        
+        <table border="1">
+            <tr>
+                <th>STT</th>
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Xóa</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+            
+        </table>
+        <button type="button" id="xoatatca" onclick="xoatatca()">Xóa tất cả</button>
+    </div>
+    
+
+    <div class="containermain">
+        <div class="nav">
+            <nav class="nav--sanpham">
+                <div class="content-sanpham">
+                    <a href="#sanpham-list">Đồ bóng đá</a>
+                    <a href="#sanpham-list__tapgym">Đồ tập gym</a>
+                    <a href="#sanpham-list__tapyoga">Đồ tập yoga</a>
+                    <a href="#sanpham-list__caulong">Đồ cầu lông</a>
+                    <a href="#sanpham-list__bongchuyen">Đồ bóng chuyền</a>
+                    <a href="#sanpham-list__bongro">Đồ bóng rổ</a>
+                    <a href="#sanpham-list__dapxe">Đồ đạp xe</a>
+                </div>
+
+                <div class="group">
+                    <i class="fa-solid fa-magnifying-glass" id="icon"></i>
+                    <input placeholder="Search" type="search" class="input">
+                </div>
+                
+                
+            </nav>
+        </div>
+
+        <div class="con--sanpham"> 
+            <div id="sanpham-list"> 
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc1.png" class="img1" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá Bayern Munich sân nhà 23/24 hàng Thái Lan</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">333,000đ</span> <span>280,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc2.png" class="img2" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá AC Milan sân khách mẫu ba 22/23 hàng Thái Lan</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">333,000đ</span> <span>280,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc3.png"  class="img3" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá AC Milan sân khách 22/23</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">120,000đ</span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc4.png"  class="img4" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá AC Milan sân khách 22/23 hàng Thái Lan</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">333,000đ</span> <span>280,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc5.png"  class="img5" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá AC Milan sân nhà 22/23 hàng Thái Lan</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">333,000đ</span> <span>280,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc6.png"  class="img6" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá Arsenal sân nhà 23/24</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">120,000đ</span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc7.png"  class="img7" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá Arsenal sân khách mẫu ba 23/24</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">120,000đ</span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongda/bongdatruoc8.png"  class="img8" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng đá Arsenal sân khách mẫu ba 22/23 hàng Thái Lan</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">333,000đ</span> <span>280,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+    
+            <!-- <div class="muc">
+                <div class="mucluc-list">
+                    <div class="mucluc mucluc1">1</div>
+                    <div class="mucluc mucluc2">2</div>
+                </div>
+            </div> -->
+    
+            <div id="sanpham-list__tapgym"> 
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc1.png"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo thun tập Gym đơn giản & Pilates ôm vừa cho nữ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>280,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc2.png"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo thun không tay tập gym & cardio my top cho nữ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>250,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc3.png"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo thun tập gym cho nam</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc4.png"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Quần legging màu đỏ cho nữ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>280,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc5.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ dụng cụ tập tay sau cho nam</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>80,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc6.webp"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Dụng cụ hổ trợ tập lưng, tay sau cho nam</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc7.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Con lăn tập bụng 4 bánh cho cả nam và nữ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapgym/tapgymtruoc8.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Con lăn tập bụng 1 bánh có thể thay cho nam và nữ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>80,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- <div class="muc">
+                <div class="mucluc-list__tapgym">
+                    <div class="mucluc mucluc1">1</div>
+                    <div class="mucluc mucluc2">2</div>
+                </div>
+            </div> -->
+
+
+            <!-- tap yoga -->
+            <div id="sanpham-list__tapyoga">
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ đồ tập thương hiệu Ahani yoga màu xanh bơ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">333,000đ</span> <span>280,000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc2.jfif" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ đồ tập thương hiệu Zumba yoga màu đỏ nhạt</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">399,000đ</span> <span>199,000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ đồ tập Yoga YSV01 vải thun lạnh đẹp</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">500,000đ</span> <span>299,000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">>Bộ đồ tập Yoga Alibaba vải thun lạnh đẹp</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">300,000đ</span> <span>250,000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc5.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Thảm yoga chất liệu bảo vệ môi trường</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>150,000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc6.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Thảm yoga Adidas 8mm bền đẹp</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">333,000đ</span> <span>280.000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc7.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Võng tập yoga bay không trọng lực 6 tay cầm vải dù</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;">1,500,000đ</span> <span>750,000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-tapyoga/tapyogatruoc8.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Tay cầm bộ võng tập yoga chuyên nghiệp</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>280,000đ</span> </b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- <div class="muc">
+                <div class="mucluc-list__tapyoga">
+                    <div class="mucluc mucluc1">1</div>
+                    <div class="mucluc mucluc2">2</div>
+                </div>
+            </div> -->
+
+            <!-- cầu lông -->
+            <div id="sanpham-list__caulong">
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc1.jpg"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Đồ cầu lông đôi đẹp cho cặp đôi</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>599,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc2.jpg"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo thun cho nữ vận động viên cầu lông chuyên nghiệp hiệu Yonex</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>250,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc3.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ 2 món gồm áo thun và váy quần vợt dành cho nữ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>499,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc4.png"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo quần cầu lông nam chính hãng, đẹp, chất lượng</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>699,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc5.webp"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Vợt cầu lông chính hãng 2023 giá rẻ, bền, đẹp</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>800,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc6.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Đồ chơi bộ 2 vợt cầu lông mini x3</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc7.webp"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Vợt cầu lông top trong tầm giá học sinh, sinh viên</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>500,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-caulong/caulongtruoc8.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Giày cầu lông XPD BT-Navy chính hãng</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>1,000,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- <div class="muc">
+                <div class="mucluc-list__caulong">
+                    <div class="mucluc mucluc1">1</div>
+                    <div class="mucluc mucluc2">2</div>
+                </div>
+            </div> -->
+
+            <!-- bóng chuyền -->
+            <div id="sanpham-list__bongchuyen">
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc1.png"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo thi đấu bóng chuyền Beyono màu trắng</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>160,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc2.webp"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo thi đấu bóng chuyền Beyono màu cam</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>160,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc3.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng chuyền RIKI-VOL vải mè cao cấp</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>499,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc4.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo bóng chuyền Beyono Apollo nữ màu đỏ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>199,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc5.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Quả bóng chuyền Thăng Long thi đấu</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>200,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc6.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Banh bóng chuyền đánh trong nhà chính hãng</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>399,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc7.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bố gối bóng chuyền, bố gối PJ</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>100,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongchuyen/bongchuyentruoc8.webp"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bọc 10 ngón tay co giãn bảo vệ hổ trợ viêm khớp</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>50,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- <div class="muc">
+                <div class="mucluc-list__bongchuyen">
+                    <div class="mucluc mucluc1">1</div>
+                    <div class="mucluc mucluc2">2</div>
+                </div>
+            </div> -->
+
+
+            <!-- bóng rổ -->
+            <div id="sanpham-list__bongro">
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc1.jpg"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo bóng rổ Jordan</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>500,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc2.jpg"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo bóng rổ Gorden State Warriors</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>500,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc3.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng rổ nam Adidas đẹp chính hãng</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>399,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc4.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo bóng rổ thể thao Lakers</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>499,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc5.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Quả bóng rổ hãng Pro star</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>200,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc6.webp"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Banh bóng rổ chính hãng Swish</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>399,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc7.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Banh bóng rổ Gentra 8500 PVC- size 7</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>300,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-bongro/bongrotruoc8.jfif"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Quả bóng rổ Spalding VBA DaNang Dragons</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>430,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- <div class="muc">
+                <div class="mucluc-list__bongro">
+                    <div class="mucluc mucluc1">1</div>
+                    <div class="mucluc mucluc2">2</div>
+                </div>
+            </div> -->
+
+            <!-- đạp xe -->
+            <div id="sanpham-list__dapxe">
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc1.webp"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo đạp xe Rockbros RK1009 </p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>880,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc2.webp"  alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo đạp xe đua đôi nam - XXL</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>500,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc3.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Áo thi đấu đạp xe đôi nam nữ đẹp, chính hãng</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>899,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc4.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Bộ quần áo đạp xe đua của nữ hãng SILLKONG</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>499,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc5.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Xe đạp đua đường trường Road GIANT Propel</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>50,000,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc6.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Xe đạp đua ASAMA RB2300 700C</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>20,000,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc7.jpg"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Giày đạp xe đua chính hãng</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>3,000,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+    
+                <div class="sanpham--item">
+                    <div class="image">
+                        <img src="../assets/img/image-dapxe/dapxetruoc8.webp"   alt="">
+                    </div>
+                    <div class="content">
+                        <p class="content1">Giày xe đạp đường trường BOODUN A2</p>
+                        <p><b><span style="text-decoration: line-through;color: gray;"></span> <span>1,499,000đ</span></b></p>
+                    </div>
+                    <div class="giohang">
+                        <input type="number" name="soluong" value="1">
+                        <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="muc">
+                <div class="mucluc-list__dapxe">
+                    <div class="mucluc mucluc1">1</div>
+                    <div class="mucluc mucluc2">2</div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    
+    
+    <footer>
+        <div class="cha-footer">
+            <div class="con1">
+                <h3>Liên hệ với chúng tôi</h3>
+                <div class="image-con1">
+                    <a href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="con2">
+                <div class="lienhe">
+                    <div class="tenlienhe">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <h3>SPORTSWEAR</h3>
+                    </div>
+                    <div class="content-lienhe">
+                        <p>Công ty đồ thể thao chúng tôi chuyên sản xuất và cung cấp các sản phẩm đồ thể thao chất lượng cao như quần áo bóng đá, 
+                            bộ đồ tập yoga, giày thể thao, phụ kiện tập luyện và nhiều sản phẩm khác. Chúng tôi cam kết mang đến cho khách hàng những 
+                            sản phẩm chất lượng với kiểu dáng thời trang, thiết kế tiện lợi và giá cả phải chăng. 
+                        </p>
+                    </div>
+                </div>
+                <div class="cactrang">
+                    <h3>Các trang chính</h3>
+                    <div class="cactrangchinh">
+                        <a href="trangchu.html">Trang chủ</a>
+                        <a href="./html/bongda.html">Sản phẩm</a>
+                        <a href="./html/giohang.html">Giỏ hàng</a>
+                        <a href="./html/dangnhap.html">Đăng nhập</a>
+                        <a href="./html/dangky.html">Đăng ký</a>
+                    </div>
+                </div>
+                <div class="lienhevoi">
+                    <h3>Liên hệ</h3>
+                    <div class="sonha">
+                        <i class="fa-solid fa-house"></i>
+                        <h5>123, Nguyen Van Linh, Tp Da Nang</h5>
+                    </div>
+                    <div class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h5>dothethao@Sportswear.com</h5>
+                    </div>
+                    <div class="dienthoai">
+                        <i class="fa-solid fa-phone"></i>
+                        <h5>+12 34567 89</h5>
+                    </div>
+                    <div class="khoa">
+                        <i class="fa-solid fa-fax"></i>
+                        <h5>+98 76543 21</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+
+    <script src="../assets/js/jsbongda.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#toggle').click(function(){
+                $('.nav-tieude').toggle();
+            });
+        });
+    </script>
+    
+</body>
+</html>
