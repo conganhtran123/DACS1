@@ -308,7 +308,7 @@ function thongbao() {
 
 }   
 function trangchu() {
-    window.location.assign('../trangchu.html');
+    window.location.assign('../index.html');
 }
 function quaylaisanpham() {
     window.location.assign('bongda.html');

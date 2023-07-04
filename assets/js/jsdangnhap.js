@@ -30,7 +30,7 @@ function dangnhap(e){
       var data = JSON.parse(user);
       if (email == data.email && password == data.password) {
         alert("Đăng nhập thành công");
-        window.location.assign('../trangchu.html');
+        window.location.assign('../index.html');
       } else {
         alert("Đăng nhập thất bại!");
       }
