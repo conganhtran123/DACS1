@@ -256,11 +256,14 @@ function dongydathang() {
     
     if ( hoten == '' || diachi == '' || dienthoai == '' || email == '') {
         alert("Vui lòng nhập đầy đủ thông tin");
-    }else {
+    }else if(dienthoai.length != 10) {
+        alert("Vui lòng nhập đầy đủ 10 số");
+    }
+    else {
         var selectElement = document.getElementById("hinhthuc");
         var selectedOptionValue = selectElement.value;
         console.log(selectedOptionValue);
-        
+
         var nguoinhan = new Array(hoten, diachi, dienthoai, email, selectedOptionValue);
         console.log(nguoinhan);
         sessionStorage.setItem("nguoinhan", JSON.stringify(nguoinhan));
