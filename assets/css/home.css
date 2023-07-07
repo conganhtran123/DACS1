@@ -379,6 +379,12 @@ hr {
         color: #6fb98f;
     }
 
+    .logo {
+        color: #000;
+        font-size: 30px;
+        font-weight: 700;
+        margin-right: 100px;
+    }
 
     main {
         flex-direction: column;
@@ -386,6 +392,7 @@ hr {
         margin-top: -100px;
         margin-bottom: -80px;
     }
+
 
     .text h1 {
         font-size: 40px;
